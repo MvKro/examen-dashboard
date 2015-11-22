@@ -1,0 +1,40 @@
+{
+  "name": "videopanel-element",
+  "version": "1.0.0",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "An element providing a solution to no problem in particular.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "seed"
+  ],
+  "main": "videopanel-element.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "svg-polymer-element": "MvKro/svg-polymer-element#~1.0.1"
+  },
+  "devDependencies": {
+    "web-component-tester": "*",
+    "svg-polymer-element": "MvKro/svg-polymer-element#~1.0.1"
+  },
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "ef93ef7c854475926fe42521fcd082d4a2243deb"
+  },
+  "_source": "git://github.com/MvKro/videopanel-element.git",
+  "_target": "~1.0.0",
+  "_originalSource": "MvKro/videopanel-element",
+  "_direct": true
+}

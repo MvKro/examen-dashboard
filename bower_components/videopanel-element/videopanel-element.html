@@ -1,0 +1,40 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../svg-polymer-element/svg-polymer-element.html">
+
+<dom-module id="videopanel-element">
+    <template>
+		<input id="video-id" placeholder="Video ID"></input>
+		<svg-element on-click="loadVideo"></svg-element>
+		<div id="player"></div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: 'videopanel-element',
+
+		loadVideo : function(){
+			var tag = document.createElement('script');
+
+			tag.src = "https://www.youtube.com/iframe_api";
+
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		}
+	});
+</script>
+
+<script type="text/javascript">
+	window.onYouTubeIframeAPIReady = function(videoID){
+				var player = new YT.Player('player', {
+
+				 height: '390',
+
+				 width: '640',
+
+				 videoId: document.getElementById('video-id').value
+
+				});
+			}
+</script>

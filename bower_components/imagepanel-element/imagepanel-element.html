@@ -1,0 +1,26 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../svg-polymer-element/svg-polymer-element.html">
+
+<dom-module id="imagepanel-element">
+    <template>
+		<div id="image-panel-wrapper">
+			<input id="image-url" placeholder="url"></input>
+			<svg-element on-click="upload"></svg-element>
+		</div>
+    </template>
+</dom-module>
+
+
+<script>
+	Polymer({
+		is: 'imagepanel-element',
+		upload: function(){
+			var panel = document.getElementById('image-panel-wrapper');
+			var url = document.getElementById('image-url').value;
+			var img = document.createElement('img');
+    		img.src = url;
+
+    		panel.appendChild(img);
+		}
+	});
+</script>

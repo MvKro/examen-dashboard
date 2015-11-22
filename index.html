@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/firebase/firebase.js"></script>
+	<script type="text/javascript" src="bower_components/angularfire/dist/angularfire.min.js"></script>
+	<script type="text/javascript" src="bower_components//dist/angularfire.min.js"></script>	
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="controllers.js"></script>
+	<script type="text/javascript" src="factories.js"></script>
+
+	<link rel="import" href="bower_components/videopanel-element/videopanel-element.html" />
+	<link rel="import" href="bower_components/imagepanel-element/imagepanel-element.html"/>
+	
+</head>
+<body ng-app="chatApp" ng-controller="chatController">
+	<ul>
+		<li ng-repeat="room in rooms">
+			<span ng-click="joinChat(room)">{{room.$id}}</span>
+		</li>
+	</ul>
+
+	Name: <input type="text" ng-model="new.name">
+	Message: <input type="text" ng-model="new.text">
+	<button ng-click="send(new)">Send</button>
+	<ul>
+		<li ng-repeat="message in messages">
+			{{message.name}}: {{message.text}}
+		</li>
+	</ul>
+
+	<div class="videopanel">
+		<videopanel-element></videopanel-element>
+	</div>
+	<div class="imagepanel">
+		<imagepanel-element></imagepanel-element>
+	</div>
+</body>
+</html>
