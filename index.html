@@ -9,31 +9,31 @@
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="controllers.js"></script>
 	<script type="text/javascript" src="factories.js"></script>
-
 	<link rel="import" href="bower_components/videopanel-element/videopanel-element.html" />
 	<link rel="import" href="bower_components/imagepanel-element/imagepanel-element.html"/>
-	
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body ng-app="chatApp" ng-controller="chatController">
-	<ul>
-		<li ng-repeat="room in rooms">
-			<span ng-click="joinChat(room)">{{room.$id}}</span>
-		</li>
-	</ul>
+	<div class="chat-window">
+		<ul>
+			<li ng-repeat="room in rooms">
+				<span ng-click="joinChat(room)">{{room.$id}}</span>
+			</li>
+		</ul>
 
-	Name: <input type="text" ng-model="new.name">
-	Message: <input type="text" ng-model="new.text">
-	<button ng-click="send(new)">Send</button>
-	<ul>
-		<li ng-repeat="message in messages">
-			{{message.name}}: {{message.text}}
-		</li>
-	</ul>
-
-	<div class="videopanel">
+		Name: <input type="text" ng-model="new.name">
+		Message: <input type="text" ng-model="new.text">
+		<button ng-click="send(new)">Send</button>
+		<ul>
+			<li ng-repeat="message in messages">
+				{{message.name}}: {{message.text}}
+			</li>
+		</ul>
+	</div>
+	<div class="video-window">
 		<videopanel-element></videopanel-element>
 	</div>
-	<div class="imagepanel">
+	<div class="image-window">
 		<imagepanel-element></imagepanel-element>
 	</div>
 </body>

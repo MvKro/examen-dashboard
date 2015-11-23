@@ -3,7 +3,7 @@ var factories = angular.module('chatApp.factories', ['firebase']);
 factories.factory('$chat', function($firebase, $firebaseArray, $firebaseObject){
   var ref = new Firebase('https://examen-chat.firebaseio.com');
   var rooms = $firebaseArray(ref.child('rooms'));
-  var messages = $firebaseArray(ref.child('rooms/Room1/messages'));
+  var messages = null;//$firebaseArray(ref.child('rooms/Room1/messages'));
 
   var create = function(message){
     return messages.$add(message);
