@@ -1,16 +1,16 @@
 var controllers = angular.module("chatApp.controllers", []);
 
-controllers.controller('chatController', function($scope, $message, $room){
+controllers.controller('chatController', function($scope, $chat){
 
-	$scope.rooms = $room.all;
+	$scope.rooms = $chat.rooms;
 
 	$scope.joinChat = function(room) {
-		$message.load($room.messages(room.$id));
+		$scope.messages = $chat.load(room.$id);
 	};
 
-	$scope.messages = $message.all;
+	$scope.messages = $chat.all;
 
 	$scope.send = function(message){
-		$message.create(message);
+		$chat.create(message);
 	};
 });
