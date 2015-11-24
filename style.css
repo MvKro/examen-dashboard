@@ -1,5 +1,51 @@
 html, body { height: 100%; padding: 0; margin: 0; }
-div { width: 50%; height: 50%; float: left; }
-.chat-window { background: #DDD; }
-.video-window { background: #AAA; }
-.image-window { background: #777; }
+
+ svg.button.style-scope.svg-element {
+    float: right;
+    margin-top: 12%;
+}
+circle.style-scope.svg-element:hover {
+    fill: #e6e9f0!important;
+}
+.chat-window {
+	background: #b56969; 
+	min-height:200px;
+ }
+ .video-window {
+background: #b3c2bf;
+min-height:200px;
+ }
+ .image-window { 
+ 	background: #e9ece5;
+ 	min-height:200px;
+
+ }
+@media (min-width: 700px) {
+	.wrapper{
+	width: 50% ;
+	display: inline-block;
+float: left;
+}
+.chat-window { 
+	width: 50% ;
+	display: inline-block;
+	min-height:650px;
+}
+.video-window {
+ width: 90% ;
+ display: inline-block;
+ min-height:300px;
+}
+.image-window { 
+width: 90% ;
+ display: inline-block;
+ min-height:350px;
+}
+#image-url, #video-id{
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 55%;
+    display: block;
+}
+}

@@ -14,6 +14,14 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body ng-app="chatApp" ng-controller="chatController">
+ <div class ="wrapper">
+	<div class="image-window">
+		<imagepanel-element></imagepanel-element>
+	</div>
+	<div class="video-window">
+		<videopanel-element></videopanel-element>
+	</div>
+</div>
 	<div class="chat-window">
 		<ul>
 			<li ng-repeat="room in rooms">
@@ -29,12 +37,6 @@
 				{{message.name}}: {{message.text}}
 			</li>
 		</ul>
-	</div>
-	<div class="video-window">
-		<videopanel-element></videopanel-element>
-	</div>
-	<div class="image-window">
-		<imagepanel-element></imagepanel-element>
 	</div>
 </body>
 </html>
